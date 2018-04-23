@@ -1,0 +1,10 @@
+{
+    "name": "chatbot_node",
+    "description": "",
+    "repository": "https://github.com/carlabrugui/xatbotnode.git",
+    "keywords": [
+        "api.ai",
+        "chatbot",
+        "webhook"
+    ]
+}
