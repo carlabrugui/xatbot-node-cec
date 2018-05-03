@@ -45,7 +45,7 @@ var createComponentsServer = function(urlPath, config) {
     });
 
     // Invoke component by name
-    router.route('/:componentName').post(function (req, res) {
+    /*router.route('/:componentName').post(function (req, res) {
         const componentName = req.params.componentName;
         shell.invokeComponentByName(req.params.componentName, req.body, {}, function(err, data) {
             if (!err) {
@@ -65,7 +65,7 @@ var createComponentsServer = function(urlPath, config) {
                 }
             }
         });
-    });
+    });*/
 
     app.use(urlPath, router);
 

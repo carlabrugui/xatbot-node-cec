@@ -1,0 +1,48 @@
+<html>
+<body>
+  <h1>Documentation</h1>
+
+  <h2>Cafe (español)</h2>
+  <p>These components allow users to interact with cafe services.</p>
+
+
+  <h2>FAQ (español)</h2>
+  <p>This example allows users to ask questions that are resolved dynamically by a knowledge repository.  The solution allows for multiple repositories to be stored at the same time to be used in different BOTS.  New repositories can be uploaded via REST calls.  Services include</p>
+  <ul>
+    <li>faq.SearchFAQ - Core service where a text is sent and matched against a list of questions. The matching is done via the string-similarity module in NPM.</li>
+  </ul>
+
+
+  <h2>Smalltalk (español)</h2>
+  <p>Samples and instructions for adding smalltalk capabilities to your bots. There are no back-end services for smalltalk.  Everything is configured inside the bot.</p>
+
+
+  <h2>SvcCloud</h2>
+  <p>These components allow users to pass the chat to a live agent.  This code is heavily based on the original integration done by Tamer for Caixa.  The main change is that the connection details can be updated on the fly via REST services.  This was necessary in order to minimize the impact of the periodic password changes made by GSE.  The code was also modified in order to stop polling of responses from Svc Cloud upon exiting the chat.  Services include:</p>
+  <ul>
+    <li>svcCloud.InitiateLiveChat - Main service used to initiate the chat.</li>
+    <li>svcCloud.ExitChat - Stops the conversation and polling.</li>
+  </ul>
+
+
+  <h2>Ticket (español)</h2>
+  <p>This example simulates a SvcCloud or JIRA type backend.  The solutions offers simple cached storage and ID generation.  The generated ID counter starts over every time the service is rebooted. Services include:</p>
+  <ul>
+    <li>tickets.CreateTicket - Passes fields necessary to create a ticket.</li>
+    <li>tickets.CloseTicket - Sets the status of the ticket to closed.</li>
+    <li>tickets.EscalateTicket - Changes the priority of the ticket.</li>
+    <li>tickets.GetTicket - Retrieves the ticket information.</li>
+    <li>tickets.CommentTicket - Sets a comment on the ticket.</li>
+  </ul>
+
+
+  <h2>WEDO</h2>
+  <p>Helper components to make it easier to quickly build bots.  They include:</p>
+  <ul>
+    <li>List - Similar to System.List, but allows for outputting FB formats.</li>
+    <li>MultiOutput - Similar to System.Output, but allows for sending multiple texts in a single component.</li>
+    <li>RandomOutput - Similar to System.Output, but randomly choses a single Output from an array of inputs.</li>
+  </ul>
+
+</body>
+</html>
