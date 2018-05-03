@@ -1,7 +1,7 @@
 {
-    "name": "chatbot_node",
+    "name": "bots-express-service-template",
     "description": "",
-    "repository": "https://github.com/carlabrugui/xatbotnode.git",
+    "repository": "https://github.com/carlabrugui/xatbot-node-cec.git",
     "keywords": [
         "api.ai",
         "chatbot",
