@@ -8,9 +8,7 @@ const urllib = require('urllib');
 
 const invokeFunction = (elementToSearch) => {
 
-    
-    // taking contentId from CEC (service "search")
-    urllib.request(`https://xatbot-node-cec.herokuapp.com/cecAdmin`,
+    urllib.request(`https://xatbot-node-cec.herokuapp.com/cec/cecAdmin`,
         {   
             method: 'GET',
             headers: {
@@ -34,9 +32,9 @@ const invokeFunction = (elementToSearch) => {
                 var name_CEC = resp.body.items[0].name;
                 //console.log("id_CEC------------------->", id_CEC);
                
-                var url = `https://xatbot-node-cec.herokuapp.com/get-respuesta/${id_CEC}`;
+                var url = `https://xatbot-node-cec.herokuapp.com/cec/get-respuesta/${name_CEC}`;
 
-                datos_lookup(url);
+                return datos_lookup(url);
             }
         });
 };
@@ -56,7 +54,7 @@ const datos_lookup = (url) => new Promise((resolve, reject) => {
             } else {
                 var respuesta = JSON.parse(data);
 
-                var entrada_name = (respuesta.body.data.entradaglosario_nombreentrada).toString();
+                //var entrada_name = (respuesta.body.data.entradaglosario_nombreentrada).toString();
                 var entrada_descr = (respuesta.body.data.entradaglosario_textoentrada).toString();
                 //var entrada_photo = (respuesta.body.data.entradaglosario_fotoentrada);
                 

@@ -2,7 +2,7 @@
 
 const log4js = require('log4js');
 const logger = log4js.getLogger();
-const moment = require('moment');
+//const moment = require('moment');
 
 const PREFIX = "faq-";
 var PREFIXQ = "faq-q-";
@@ -11,12 +11,12 @@ var cache = require('persistent-cache');
 var cats = cache({base: 'faq'});
 
 module.exports = {
-  getById: (id) => {
+  getByName: (name) => {
     var faq = {
-      id: id
+      name: name
     }
-    if( id != null && id.length>0 ) {
-      logger.info("CEC: getById ="+id);
+    if( name != null && name.length>0 ) {
+      logger.info("CEC: getById ="+name);
       
     }
     return faq;

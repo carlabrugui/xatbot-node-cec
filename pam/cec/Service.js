@@ -100,9 +100,9 @@ const worker = (client, contentType, collectionId) => {
       console.log("DATA="+JSON.stringify(data));
       return client.updateContentItem(data)
     },*/
-    lookup: (id, res) => {
+    lookup: (name, res) => {
       let data = {
-        id: id
+        name: name
       }
       console.log("DATA="+JSON.stringify(data));
       return client.getContentItem(data);
