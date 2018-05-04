@@ -2,17 +2,18 @@
 
 var express = require('express');
 var bodyParser = require('body-parser');
-var auth = require('http-auth');
+//var auth = require('http-auth');
+var auth = require('http');
 var serveIndex = require('serve-index')
 
-let samplesAdminUser = process.env.BOTS_SAMPLES_USER || 'oracle';
+/*let samplesAdminUser = process.env.BOTS_SAMPLES_USER || 'oracle';
 let samplesAdminPwd = process.env.BOTS_SAMPLES_PASSWORD || 'welcome1';
 const basic = auth.basic({
 		realm: "Bots Custom Component Service"
 	}, (username, password, callback) => {
 		callback(username === samplesAdminUser && password === samplesAdminPwd);
 	}
-);
+);*/
 
 var createComponentsServer = function(urlPath, config) {
     var app = express();
@@ -35,7 +36,7 @@ var createComponentsServer = function(urlPath, config) {
 	var shell = require('./shell')(config);
 
     var router = express.Router();
-    router.use(auth.connect(basic));
+   // router.use(auth.connect(basic));
 
     // Return component metadata
     router.route('/').get(function (req, res) {
