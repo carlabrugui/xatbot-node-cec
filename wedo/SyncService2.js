@@ -1,4 +1,4 @@
-/*"use strict"
+"use strict"
 
 const Math = require('mathjs');
 
@@ -98,5 +98,3 @@ function doGetService2(url) {
   logger.info("wedo.SyncService. response="+response.body);
   return response.body;
 };
-
-/

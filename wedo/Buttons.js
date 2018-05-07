@@ -1,4 +1,4 @@
-/*"use strict";
+"use strict";
 
 var log4js = require('log4js');
 var logger = log4js.getLogger();
@@ -122,4 +122,3 @@ function parseOption(optionString, imgBase) {
 
   return opt;
 };
-*/

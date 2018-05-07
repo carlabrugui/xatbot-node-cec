@@ -1,4 +1,4 @@
-/*"use strict"
+"use strict"
 
 const Math = require('mathjs');
 
@@ -65,4 +65,4 @@ function getModTime(max) {
   var now = Date.now();
   max = Math.floor(max);
   return now % max;
-}*/
+}

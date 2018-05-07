@@ -2,7 +2,7 @@
 
 module.exports = {
 components: {
-/*
+
 	'wedo.MultiOutput': require('./wedo/MultiOutput'),
 	'wedo.RandomOutput': require('./wedo/RandomOutput'),
 	'wedo.List': require('./wedo/List'),
@@ -16,6 +16,6 @@ components: {
 
 	'loyalty.Award': require('./loyalty/Award')
 
-*/
+
 }
 };

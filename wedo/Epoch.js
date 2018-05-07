@@ -1,4 +1,4 @@
-/*"use strict"
+"use strict"
 
 const Math = require('mathjs');
 
@@ -28,4 +28,3 @@ module.exports = {
     done();
   }
 };
-*/

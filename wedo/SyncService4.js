@@ -1,4 +1,4 @@
-/*"use strict"
+"use strict"
 
 const Math = require('mathjs');
 
@@ -161,4 +161,4 @@ function parseBody(body, conversation) {
   }
   logger.info("wedo.SyncService..parseBody="+body);
   return body;
-};*/
+};

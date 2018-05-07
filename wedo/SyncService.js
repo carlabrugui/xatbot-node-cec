@@ -1,4 +1,4 @@
-/*"use strict"
+"use strict"
 
 var log4js = require('log4js');
 var logger = log4js.getLogger();
@@ -154,4 +154,3 @@ function substituteVariables(data, conversation) {
   //logger.info("substituteVariables="+data);
   return data;
 };
-*/

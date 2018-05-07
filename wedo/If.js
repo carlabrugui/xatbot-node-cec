@@ -6,7 +6,7 @@ var log4js = require('log4js');
 var logger = log4js.getLogger();
 var Helper = require('../util/Helper').Helper;
 
-/*module.exports = {
+module.exports = {
   metadata: () => ({
     "name": "wedo.If",
     "properties": {
@@ -35,4 +35,4 @@ var Helper = require('../util/Helper').Helper;
     conversation.transition(action);
     done();
   }
-};*/
+};

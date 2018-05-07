@@ -2,41 +2,38 @@
 
 var express = require('express');
 var bodyParser = require('body-parser');
-//var auth = require('http-auth');
-var auth = require('http');
+var auth = require('http-auth');
 var serveIndex = require('serve-index')
 
-/*let samplesAdminUser = process.env.BOTS_SAMPLES_USER || 'oracle';
+let samplesAdminUser = process.env.BOTS_SAMPLES_USER || 'oracle';
 let samplesAdminPwd = process.env.BOTS_SAMPLES_PASSWORD || 'welcome1';
 const basic = auth.basic({
 		realm: "Bots Custom Component Service"
 	}, (username, password, callback) => {
 		callback(username === samplesAdminUser && password === samplesAdminPwd);
 	}
-);*/
+);
 
 var createComponentsServer = function(urlPath, config) {
     var app = express();
     app.use(bodyParser.urlencoded({extended: true}));
     app.use(bodyParser.json());
-    
-    var logger = (config ? config.logger : null);
-      
-    if (!logger) {
+
+		var logger = (config ? config.logger : null);
+	  if (!logger) {
 	    const log4js = require('log4js');
 	    logger = log4js.getLogger();
 	    logger.setLevel('INFO');
 	    log4js.replaceConsole(logger);
-	}
-    
-    if (config){
-		config.logger = logger;
-	}
+	  }
+		if (config){
+			config.logger = logger;
+		}
 
-	var shell = require('./shell')(config);
+		var shell = require('./shell')(config);
 
     var router = express.Router();
-   // router.use(auth.connect(basic));
+    router.use(auth.connect(basic));
 
     // Return component metadata
     router.route('/').get(function (req, res) {
@@ -46,7 +43,7 @@ var createComponentsServer = function(urlPath, config) {
     });
 
     // Invoke component by name
-    /*router.route('/:componentName').post(function (req, res) {
+    router.route('/:componentName').post(function (req, res) {
         const componentName = req.params.componentName;
         shell.invokeComponentByName(req.params.componentName, req.body, {}, function(err, data) {
             if (!err) {
@@ -66,7 +63,7 @@ var createComponentsServer = function(urlPath, config) {
                 }
             }
         });
-    });*/
+    });
 
     app.use(urlPath, router);
 

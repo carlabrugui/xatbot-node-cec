@@ -12,7 +12,7 @@ const entities = new Entities()
 const worker = (client, contentType, collectionId) => {
   const helper = {
     fieldPrefix: contentType.toLowerCase(),
-    /*addToCollection: response => {
+    addToCollection: response => {
       // add to collection
       let id =
         response.data &&
@@ -59,10 +59,10 @@ const worker = (client, contentType, collectionId) => {
         aggr[helper.fieldPrefix + '_' + 'videoURL'.toLowerCase()] = item[key]
         return aggr
       }, {})
-    }*/
+    }
   }
   return {
-    /*inject: item => {
+    inject: item => {
       if (item.videoURL) {
         item.videoURL = item.videoURL.startsWith('//')
           ? 'https:' + item.videoURL
@@ -99,14 +99,14 @@ const worker = (client, contentType, collectionId) => {
       }
       console.log("DATA="+JSON.stringify(data));
       return client.updateContentItem(data)
-    },*/
-    lookup: (name, res) => {
+    },
+    lookup: (id, res) => {
       let data = {
-        name: name
+        id: id
       }
       console.log("DATA="+JSON.stringify(data));
       return client.getContentItem(data);
-    }/*,
+    },
     searchUser: user => {
       let data = {
         user: user,
@@ -114,7 +114,7 @@ const worker = (client, contentType, collectionId) => {
       }
       console.log("DATA="+JSON.stringify(data));
       return client.searchUserContent(data);
-    }*/
+    }
   }
 }
 

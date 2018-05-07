@@ -1,4 +1,4 @@
-/*"use strict"
+"use strict"
 
 const Math = require('mathjs');
 
@@ -56,4 +56,4 @@ function doGetService(url) {
       //console.log(response);
       return data;
   });
-};*/
+};

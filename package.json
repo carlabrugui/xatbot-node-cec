@@ -3,12 +3,8 @@
   "version": "1.0.0",
   "description": "Bots Express-based component service template",
   "main": "index.js",
-  "repository": "https://github.com/carlabrugui/xatbot-node-cec.git",
+  "repository": {},
   "license": "ISC",
-  "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "dependencies": {
     "axios": "^0.17.1",
     "body-parser": "^1.15.0",
@@ -31,7 +27,6 @@
     "request-promise-native": "^1.0.5",
     "sentiment": "^4.2.0",
     "serve-index": "^1.9.1",
-    "uniqid": "^4.1.1",
-    "urllib": "^2.27.0"
+    "uniqid": "^4.1.1"
   }
 }

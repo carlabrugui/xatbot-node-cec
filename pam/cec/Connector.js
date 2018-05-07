@@ -2,7 +2,7 @@
 
 const log4js = require('log4js');
 const logger = log4js.getLogger();
-//const moment = require('moment');
+const moment = require('moment');
 
 const PREFIX = "faq-";
 var PREFIXQ = "faq-q-";
@@ -11,17 +11,17 @@ var cache = require('persistent-cache');
 var cats = cache({base: 'faq'});
 
 module.exports = {
-  getByName: (name) => {
+  getById: (id) => {
     var faq = {
-      name: name
+      id: id
     }
-    if( name != null && name.length>0 ) {
-      logger.info("CEC: getById ="+name);
+    if( id != null && id.length>0 ) {
+      logger.info("CEC: getById ="+id);
       
     }
     return faq;
   },
-  /*getAvailableFAQLists: () => {
+  getAvailableFAQLists: () => {
     return cats.keysSync();
   },
   getFAQs: (name) => {
@@ -66,13 +66,13 @@ module.exports = {
       logger.info("Error adding FAQ.  faq="+faq);
     }
     return newFaq;
-  }*/
+  }
 };
-/*
+
 function getFAQQuestions(name) {
   var qs = cats.getSync(PREFIXQ+name);
   if( qs==null ) {
     qs = buildQlist(name);
   }
   return qs;
-}*/
+}

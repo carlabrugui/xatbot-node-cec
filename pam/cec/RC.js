@@ -39,7 +39,7 @@ let debugUtil = {
 
 const RestClient = context =>
   login(context).then(jar => ({
-    /*createContentItem: (data,res) => {
+    createContentItem: (data,res) => {
       let options = {
         method: 'POST',
         uri: context.host + '/content/management/api/v1/items',
@@ -159,11 +159,11 @@ const RestClient = context =>
             res.status(200).send(response);
             return {};
         });
-    },*/
+    },
     getContentItem: (data, res) => {
       let options = {
         method: 'GET',
-        uri: context.host + '/content/management/api/v1/items/'+ data.name,
+        uri: context.host + '/content/management/api/v1/items/'+data.id,
         jar: jar,
         simple: false,
         json: true,
@@ -190,7 +190,7 @@ const RestClient = context =>
             return {};
         });
     },
-    /*searchByType: (data, res) => {
+    searchByType: (data, res) => {
       var url = context.host + '/content/management/api/v1/items?field:type:equals='+data.type;
       if( data.name ) {
         url += "&field:name:equals="+data.name;
@@ -242,7 +242,7 @@ const RestClient = context =>
           fileId
       }
       return request(options)
-    }*/
+    }
   }))
 
 module.exports = context => RestClient(context)

@@ -1,4 +1,4 @@
-/*"use strict"
+"use strict"
 
 const Math = require('mathjs');
 
@@ -87,4 +87,3 @@ function callRest(url) {
       console.log("BAD");
     });
 };
-*/
