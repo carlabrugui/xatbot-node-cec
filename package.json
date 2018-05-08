@@ -4,7 +4,6 @@
   "description": "Bots Express-based component service template",
   "main": "index.js",
   "repository": "https://github.com/carlabrugui/xatbot-node-cec.git",
-  
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
