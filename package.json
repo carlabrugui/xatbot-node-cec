@@ -4,7 +4,7 @@
   "description": "Bots Express-based component service template",
   "main": "index.js",
   "repository": "https://github.com/carlabrugui/xatbot-node-cec.git",
-  "license": "ISC",
+  
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,6 +14,8 @@
     "chatbot",
     "webhook"
   ],
+  "author": "Carla",
+  "license": "ISC",
   "dependencies": {
     "axios": "^0.17.1",
     "body-parser": "^1.15.0",
