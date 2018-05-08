@@ -1,0 +1,10 @@
+{
+    "name": "bots-express-service-template",
+    "description": "Bots Express-based component service template",
+    "repository": "https://github.com/carlabrugui/xatbot-node-cec.git",
+    "keywords": [
+        "api.ai",
+        "chatbot",
+        "webhook"
+    ]
+}
