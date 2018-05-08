@@ -9,6 +9,11 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "api.ai",
+    "chatbot",
+    "webhook"
+  ],
   "dependencies": {
     "axios": "^0.17.1",
     "body-parser": "^1.15.0",
