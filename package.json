@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Bots Express-based component service template",
   "main": "index.js",
-  "repository": {},
+  "repository": "https://github.com/carlabrugui/xatbot-node-cec.git",
   "license": "ISC",
   "scripts": {
     "start": "node index.js",
