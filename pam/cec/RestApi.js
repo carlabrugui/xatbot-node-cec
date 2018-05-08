@@ -10,10 +10,10 @@ var bodyParser = require('body-parser');
 var CECConnector = require('./Connector');
 
 const context = {
-  host: "https://emea-gse00009991.sites.us2.oraclecloud.com",
-  domain: "gse00009991",
-  user: "wedo",
-  password: "Oc4j1014"
+  host: "process.env.CEC_URL",
+  domain: "process.env.CEC_DOMAIN",
+  user: "process.env.CEC_USER",
+  password: "process.env.CEC_PW"
 }
 
 const config = {
