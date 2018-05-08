@@ -10,15 +10,16 @@ var bodyParser = require('body-parser');
 var CECConnector = require('./Connector');
 
 const context = {
-  host: "process.env.CEC_URL",
-  domain: "process.env.CEC_DOMAIN",
-  user: "process.env.CEC_USER",
-  password: "process.env.CEC_PW"
+  host: process.env.CEC_URL || "https://contentandexpe-eseverisdex.documents.us2.oraclecloud.com",
+  domain: process.env.CEC_DOMAIN || "eseverisdex",
+  user: process.env.CEC_USER || "carla.brugulat.rica.st@everis.com",
+  password: process.env.CEC_PW || "1Q2w3e4r5t" 
+  
 }
 
 const config = {
-  contentType: "process.env.CEC_CONTENT_TYPE",
-  collectionId: "process.env.CEC_COLLECTION_ID"
+  contentType: process.env.CEC_CONTENT_TYPE,
+  collectionId: process.env.CEC_COLLECTION_ID
 }
 
 router.use(bodyParser.urlencoded({ extended: true }));
